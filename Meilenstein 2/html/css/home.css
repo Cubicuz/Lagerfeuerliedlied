@@ -1,0 +1,72 @@
+html {
+	height:100%;
+}
+
+body {
+	height:100%;
+	background-color: rgb(26, 32, 94);
+	color:white;
+	margin:0px;
+	font-family:arial;
+}
+#Main {
+	width:100%;
+	height:100%;
+	border-spacing:0px;
+}
+
+#Main td {
+	width:50%;
+	vertical-align: top;
+	padding:0px;
+}
+
+#Main .left {
+	border-right: solid 4px;
+	text-align:right;
+}
+h1 {
+	font-size: 60px;
+}
+h1 span{
+	color:rgb(136, 0, 22);
+}
+
+#Main a{
+	color:white;
+}
+
+.button{
+	width: 300px;
+	height: 200px;
+	line-height:200px;
+	
+	border: solid white;
+	border-width: 8px 8px 8px 0px;
+	text-align:center;
+}
+
+.left .button{
+	margin-left: auto;
+	margin-right: 0;
+	
+	border-width: 8px 0px 8px 8px;
+}
+
+.button:hover {
+	background-color: rgb(165, 169, 230);
+	color: black;
+}
+
+.button span {
+	display:inline-block;
+	vertical-align:middle;
+	font-size:48px;
+	line-height:48px;
+	font-weight: bold;
+}
+#Logo {
+	position:absolute;
+	bottom:20px;
+	right:20px;
+}
