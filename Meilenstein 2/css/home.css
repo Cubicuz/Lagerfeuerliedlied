@@ -109,11 +109,13 @@ h1 span{
 	damit verändert man die visualsierung des objekts und darf es nun
 	mit : vertical-align verschieben sonst wäre dies nicht möglich.
 	*/
-.button span {
+.button a {
 	display:inline-block;
 	vertical-align:middle;
 	font-size:48px;
 	font-weight: bold;
+	/* ein link soll hier kein unterstrich bekommen */
+	text-decoration: none; 
 }
 #Logo {
 	position:absolute;
