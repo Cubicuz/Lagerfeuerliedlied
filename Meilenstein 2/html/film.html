@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="de">
     <head>
+        <link rel="stylesheet" type="text/css" href="../css/layoutmf.css">
         <title>Film</title>
     </head>
     <body>
-        <div align="centre"> <h1>Film</h1> <h3><a href="">zurück</a></h3></div>
+        <div> <h1>Film    </h1><h3><a href="home.html">(zur&uuml;ck)</a></h3></div>
+        <div id="Logo">Lagerfeuerliedlied</div>
         <form id="Formular" action="http://martinakraus.net/immdb.php">
             <table>
                 <tr>
@@ -30,19 +32,19 @@
                 <tr>
                     <td>Genre</td>
                     <td>
-                        <select name="genre">
+                        <select name="filmgenre">
                             <option value="horror" selected="selected">Horror</option>
                             <option value="psycho">Psycho</option>
                             <option value="krimi">Krimi</option>
                             <option value="doku">Doku</option>
-                            <option value="komoedie">Komödie</option>
+                            <option value="komoedie">Kom&ouml;die</option>
                             <option value="romanze">Romanze</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
                     <td>Als Favorit markieren</td>
-                    <td><input type="checkbox" name="favorit"></td>
+                    <td><input type="checkbox" name="filmfavorit"></td>
                 </tr>
                 <tr>
                     <td></td>

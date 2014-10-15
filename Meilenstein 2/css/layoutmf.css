@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(26,32,94);
+    color: white;
+    font-size: 14px;
+}
+
+h1 , h3 {
+    display: inline;
+}
+
+div {
+    text-align: center;
+}
+
+#Logo {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 30px;
+    border: solid white 1px;
+}
+
+a:link{
+    color: white;
+    text-decoration: none;
+}
+a:visited{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+    text-decoration: underline;
+
+}
+a:active{
+    color: white;
+}
