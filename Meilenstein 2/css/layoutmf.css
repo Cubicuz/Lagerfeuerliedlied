@@ -24,8 +24,11 @@ div {
     border: solid white 1px;
 }
 
-#Formular input[type="text"] {
+#Formular input {
     margin-left: 0px;
+}
+
+#Formular input[type="text"] {
     width: 100%;
 }
 
