@@ -1,0 +1,92 @@
+.side {
+	width: 50%;
+	float: left;
+	height : 100%;
+}
+
+#leftside {
+	border-right: solid 2px white;
+	margin-right: -2px;
+	text-align:right;
+}
+
+#rightside {
+	border-left: solid 2px white;
+	margin-left: -2px;
+}
+
+#leftside h1{
+	padding-right: 2px;
+}
+
+h1 {
+	font-size: 60px;
+}
+/* alle spans in überschriften 1 ... */
+h1 span{
+	/* der bunte großbuchstabe */
+	color:rgb(136, 0, 22);
+}
+
+#menu {
+	background-color:rgb(26, 32, 94);
+	position:absolute;
+	top: 50%;
+	left:50%;
+	margin-top: -134px;
+	margin-left: -394px;
+	height: 260px;
+	width: 780px;
+	border: solid white 8px;
+}
+
+.button{
+	width: 258px;
+	height: 260px;
+	float: left;
+	border-left: solid white 2px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 260px;
+	font-size: 48px;
+	font-weight:bold;
+}
+
+.button:hover{
+	background-color: rgb(165, 169, 230);
+	color:black;
+	cursor:pointer;
+}
+
+
+/* 	html und body bekommt hier height 100% damit immer der gesamte Browser ausgefüllt wird
+	Warum ? Nun damit nacher die Box in der Mitte  zentriert wird.
+	Sonst würde eine table einfach nur so viel Raum nehmen wie die zellen drinnen benötigen.
+ */
+html {
+	height:100%;
+}
+body {
+	height:100%;
+	background-color: rgb(26, 32, 94);
+	color:white;
+	/* 	Wenn man margin 0px weglässt bekommt dieser bei chrome zumindest standartmässig 8px,
+		da nun aber die Höhe schon 100% ist wird der  Screen auf 100% und 2x 8px verlängert
+		ergo die seite muss immer gescrolled werden. 
+	*/
+	margin:0px;
+	font-family:arial;
+}
+#logo {
+	position:absolute;
+	bottom:20px;
+	right:20px;
+}
+
+#taddel {
+	position:absolute;
+	width:90px;
+	height:139px;
+	
+	background-image:url("../jpg/taddel.gif");
+}
