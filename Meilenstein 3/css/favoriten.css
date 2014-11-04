@@ -1,0 +1,28 @@
+#header{
+    width: 75%;
+    float: left;
+    text-align: center;
+    height: 60px;
+}
+
+#logo{
+    width: 25%;
+    float: right;
+    height: 100px;
+}
+
+#menu{
+    position:absolute;
+    left:22%;
+    top: 20%;
+    height: 70px;
+    width: 500px;
+    background-color:rgb(26, 32, 94);
+    border: solid white 4px;
+}
+
+.button{
+    line-height: 70px;
+    font-size: 21px;
+    width: 248px;
+}
