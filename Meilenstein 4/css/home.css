@@ -1,0 +1,124 @@
+/* 	html und body bekommt hier height 100% damit immer der gesamte Browser ausgefüllt wird
+	Warum ? Nun damit nacher die Box in der Mitte  zentriert wird.
+	Sonst würde eine table einfach nur so viel Raum nehmen wie die zellen drinnen benötigen.
+ */
+html {
+	height:100%;
+}
+body {
+	height:100%;
+	background-color: rgb(26, 32, 94);
+	color:white;
+	/* 	Wenn man margin 0px weglässt bekommt dieser bei chrome zumindest standartmässig 8px,
+		da nun aber die Höhe schon 100% ist wird der  Screen auf 100% und 2x 8px verlängert
+		ergo die seite muss immer gescrolled werden. 
+	*/
+	margin:0px;
+	font-family:arial;
+}
+/* Dies ist die unsichtbare table
+Da table die ID "Main" hat muss man sie hier mit # ansprechen, es ist keine klasse da sie nur einmal vorkommt
+*/
+#Main {
+	width:100%;
+	height:100%;
+	/* Eine table hat standartmässig border-spacing dies bewirkt das ziwschen den zellen raum entsteht
+		Wenn dies nicht auf 0 gestellt wird hat die Box in der Mitte nacher beim Rand ein leeren zwischenraum
+	*/
+	border-spacing:0px;
+}
+/* 	#Main td
+	Dies bedeutet ich spreche hier alle td ( table data, also zellen ) an welche sich inerhalb von #Main befinden
+*/
+#Main td {
+	/* Jede zelle soll 50% des screen benutzen */
+	width:50%;
+	/*  vertical-align macht dass die Zelle nicht standartmässig vertical zentriert ist sonder eben alles nach oben
+		gepresst wird. Dies hat nur nutzen bei der Überschrift
+	*/
+	vertical-align: top;
+	/* 	padding ist wiederum hier standartmässig auf ein wert den wir nicht bruachen (ist nur 1 px aber doch zu viel )
+		-> nullieren
+	*/
+	padding:0px;
+}
+/* #Main .left spricht alle classen mit "left" an die in der #Main liegen
+*/
+#Main .left {
+	/* diese bekommen nun den border der in der mitte liegt ( theoretisch liegt er damit also nicht ganz
+		zentriert aber pssst */
+	border-right: solid 4px;
+	text-align:right;
+}
+/* alle überschriften 1 ... */
+h1 {
+	font-size: 60px;
+}
+/* alle spans in überschriften 1 ... */
+h1 span{
+	/* der bunte großbuchstabe */
+	color:rgb(136, 0, 22);
+}
+
+/* alle a ins #Main */
+#Main a{
+	/* a haben die eigenschaft lila ( bzw browserabhängig gefärbt zu werden ) das muss unterbunden werden
+	*/
+	color:white;
+}
+/* Der button ansicht ist 300px breit und 200 px hoch
+	nun warum dieses line-height ?
+	Dass ist ein trick um die Schrift im Button vollkommen zu zentrieren
+	Dazu muss line-height ( also Zeilen höhe ) so hoch wie height sein
+	( sprich man muss sich vorstellen dass der text da drin eine höhe von der box einehmen muss )
+	damit kann man ihn in sich selber zentrieren
+*/
+.button{
+	width: 300px;
+	height: 200px;
+	line-height:200px;
+	text-align:center;
+	border: solid white;
+	/*  der border ist hierbei der rechte
+		das 8px 8px 8px 0px heist er malt die obrige wand, die rechte und die untere wand 
+		aber 0px bei der linken wand ( wie genau die reihenfolge ist vergess ich immer )
+		*/
+	border-width: 8px 8px 8px 0px;
+}
+/* dies sind alle classen "left" inder classe "button"
+	hierbei sprech ich also nur den linken button an.
+*/
+
+.left .button{
+	margin-left: auto;
+	margin-right: 0;
+	
+	border-width: 8px 0px 8px 8px;
+}
+
+/*  Ja dass ist die kunst von css
+	iwas:hover macht dass bei maus over der css style geändert wird zu dem hier
+	in dem fall also farben tauschen
+*/
+.button:hover {
+	background-color: rgb(165, 169, 230);
+	color: black;
+}
+/*  Das ist nun der text im Button 
+	Er hat display:inline-block
+	damit verändert man die visualsierung des objekts und darf es nun
+	mit : vertical-align verschieben sonst wäre dies nicht möglich.
+	*/
+.button a {
+	display:inline-block;
+	vertical-align:middle;
+	font-size:48px;
+	font-weight: bold;
+	/* ein link soll hier kein unterstrich bekommen */
+	text-decoration: none; 
+}
+#Logo {
+	position:absolute;
+	bottom:20px;
+	right:20px;
+}
