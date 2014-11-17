@@ -81,5 +81,6 @@ function checkMusic(){
 	if (check == false) {
 		alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingabe");
 	}
+	console.log("lol");
 	return check;
 }
