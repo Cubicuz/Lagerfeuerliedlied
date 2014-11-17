@@ -1,8 +1,34 @@
-var regTitel = /[A-Za-z0-1]+/;
-var regInterpreter = /[A-Za-z]+/;
-var regRegieundDrehbuch = /([A-Za-zäöüÄÖÜß]+) \s ([A-Za-zäöüÄÖÜß]+)/;
-var regErscheinungsjahr = /1[89][0-9][0-9]|20[01][0-9]/;
-var regSchauspielerundSongs = /([A-Za-zäöüÄÖÜß ]+)(,[A-Za-zäöüÄÖÜß ]+)+/;
+/*	^ : vom start
+	[A-Za-zäöüÄÖÜß]+ : Eine anzhal von deutschen buchstaben mit zahlen
+	$ : danach nix mehr zusätzliches
+*/
+var regTitel = /^[A-Za-z0-9äöüÄÖÜß]+$/;
+/*	^ : vom start
+	[A-Za-zäöüÄÖÜß]+ : Eine anzhal von deutschen buchstaben
+	$ : danach nix mehr zusätzliches
+*/
+var regInterpreter = /^[A-Za-zäöüÄÖÜß]+$/
+/*	^ : vom start
+	[A-Za-zäöüÄÖÜß]+ : Eine anzhal von deutschen buchstaben
+	  : dann das leerzeichen
+	[A-Za-zäöüÄÖÜß]+ : und wiederum eine anzahl von deutschen buchstaben
+	$ : danach nix mehr zusätzliches
+*/
+var regRegieundDrehbuch = /^[A-Za-zäöüÄÖÜß]+ [A-Za-zäöüÄÖÜß]+$/;
+/* 	^ : vom start
+	entweder 1\d{3} : also 1 mit genau 3 ziffern ( 1000->1999)
+	oder 200[0-9] : 2000 -> 2009
+	oder 201[0-4] : 2010 -> 2014
+	% : danach nix mehr zusätzliches
+*/
+var regErscheinungsjahr = /^(1\d{3}|200[0-9]|201[0-4])$/;
+/*  ^ : vom start ( sonst kann davor zb sonderzeichen stehen )
+	[A-Za-zäöüÄÖÜß ]+ : ein name halt in deutscher srprache
+	(,[A-Za-zäöüÄÖÜß ]+) : dann "," mit mindestens 1 buchstaben bzw einen ganzen namen
+	* : dies kann sich wiederholen von 0 - unendlich
+	$ : damit man nicht danach müll schreiben kann ( peter, hans &$§ ) wäre ohne $ richtig
+*/
+var regSchauspielerundSongs = /^[A-Za-zäöüÄÖÜß ]+(,[A-Za-zäöüÄÖÜß ]+)*$/;
    
 
 function checkFilm(){
@@ -81,6 +107,5 @@ function checkMusic(){
 	if (check == false) {
 		alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingabe");
 	}
-	console.log("lol");
 	return check;
 }
