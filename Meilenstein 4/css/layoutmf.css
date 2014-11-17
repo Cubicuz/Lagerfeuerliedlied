@@ -36,7 +36,10 @@ div {
     width: 100%;
 }
 
-
+#Formular .error{
+	border-color:red;
+	border-width:3px;
+}
 
 a:link{
     color: white;
