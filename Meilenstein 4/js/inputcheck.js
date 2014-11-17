@@ -2,7 +2,7 @@
 	[A-Za-zäöüÄÖÜß]+ : Eine anzhal von deutschen buchstaben mit zahlen
 	$ : danach nix mehr zusätzliches
 */
-var regTitel = /^[A-Za-z0-9äöüÄÖÜß]+$/;
+var regTitel = /^[A-Za-z0-9äöüÄÖÜß ]+$/;
 /*	^ : vom start
 	[A-Za-zäöüÄÖÜß]+ : Eine anzhal von deutschen buchstaben
 	$ : danach nix mehr zusätzliches
