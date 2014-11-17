@@ -7,7 +7,7 @@ var regTitel = /^[A-Za-z0-9äöüÄÖÜß ]+$/;
 	[A-Za-zäöüÄÖÜß]+ : Eine anzhal von deutschen buchstaben
 	$ : danach nix mehr zusätzliches
 */
-var regInterpreter = /^[A-Za-zäöüÄÖÜß]+$/
+var regInterpreter = /^[A-Za-zäöüÄÖÜß ]+$/
 /*	^ : vom start
 	[A-Za-zäöüÄÖÜß]+ : Eine anzhal von deutschen buchstaben
 	  : dann das leerzeichen
