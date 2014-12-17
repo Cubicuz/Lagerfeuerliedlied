@@ -1,0 +1,59 @@
+body {
+    background-color: rgb(26,32,94);
+    color: white;
+    font-size: 14px;
+}
+
+h1 , h3 {
+    display: inline;
+}
+
+table {
+    margin-left: 10%;
+}
+
+div {
+    padding-left: 40%;
+}
+
+#Logo {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 1px;
+    border: solid white 1px;
+}
+
+#Formular input {
+    margin-left: 0px;
+}
+
+#Formular input[type="text"] {
+    width: 100%;
+}
+
+#Formular textArea {
+    width: 100%;
+}
+
+#Formular .error{
+	border-color:red;
+	border-width:3px;
+}
+
+a:link{
+    color: white;
+    text-decoration: none;
+}
+a:visited{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+    text-decoration: underline;
+
+}
+a:active{
+    color: white;
+}

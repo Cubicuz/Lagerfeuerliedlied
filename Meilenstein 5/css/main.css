@@ -1,0 +1,49 @@
+/* 	html und body bekommt hier height 100% damit immer der gesamte Browser ausgefüllt wird
+	Warum ? Nun damit nacher die Box in der Mitte  zentriert wird.
+	Sonst würde eine table einfach nur so viel Raum nehmen wie die zellen drinnen benötigen.
+ */
+html {
+	height:100%;
+}
+body {
+	height:100%;
+	background-color: rgb(26, 32, 94);
+	color:white;
+	/* 	Wenn man margin 0px weglässt bekommt dieser bei chrome zumindest standartmässig 8px,
+		da nun aber die Höhe schon 100% ist wird der  Screen auf 100% und 2x 8px verlängert
+		ergo die seite muss immer gescrolled werden. 
+	*/
+	margin:0px;
+	font-family:arial;
+}
+
+h1 {
+	margin: 0px;
+	padding: 40px 0px;
+	font-size: 36px;
+}
+/* alle spans in überschriften 1 */
+h1 span{
+	/* der bunte großbuchstabe */
+	color:rgb(136, 0, 22);
+}
+
+.menu {
+	background-color:rgb(26, 32, 94);
+	border: solid white 8px;
+}
+
+.button{
+	float: left;
+	height:100%;
+	border-left: solid white 2px;
+	text-align: center;
+	vertical-align: middle;
+	font-weight:bold;
+}
+
+.button:hover{
+	background-color: rgb(165, 169, 230);
+	color:black;
+	cursor:pointer;
+}

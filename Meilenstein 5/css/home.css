@@ -1,0 +1,58 @@
+.side {
+	width: 50%;
+	float: left;
+	height : 100%;
+}
+
+#leftside {
+	border-right: solid 2px white;
+	margin-right: -2px;
+	text-align:right;
+}
+
+#rightside {
+	border-left: solid 2px white;
+	margin-left: -2px;
+}
+
+#leftside h1{
+	/* sieht so besser aus ( ansonsten drückt das e direkt an die wand in der mitte ) */
+	padding-right: 2px;
+}
+
+.menu {
+	position:absolute;
+	left:50%;
+	top: 50%;
+	/*das menu der main ist halt nunmal so groß */
+	height: 260px;
+	width: 780px;
+	/* 	von der mitta aus beginnt es
+		dann muss man halt noch mit margin die hälfte der höhe / länge zurück
+		und natürlich nicht die 8px des borders vergessen */
+	margin-top: -138px;
+	margin-left: -398px;
+}
+
+.button{
+	font-size: 48px;
+	/* so passen halt genau 3 buttons rein ( ka bei 33% isses schwer daher hier einfach mal probiert ) */
+	width: 258px;
+	/* 	line height kann man leider nicht auf 100% stellen 
+		aber ohne ihm würde man die schrift nicht vertical zentrieren können */
+	line-height: 260px;
+}
+
+#taddel {
+	position:absolute;
+	width:90px;
+	height:139px;
+	
+	background-image:url("../jpg/taddel.gif");
+}
+
+#logo {
+	position:absolute;
+	bottom:20px;
+	right:20px;
+}
