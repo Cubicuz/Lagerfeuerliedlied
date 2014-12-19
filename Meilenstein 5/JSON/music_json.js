@@ -1,4 +1,4 @@
-musicfav = [
+[
     {
         "Interpreter":"Farin Urlaub",
         "Albumtitel":"Faszination Weltraum",

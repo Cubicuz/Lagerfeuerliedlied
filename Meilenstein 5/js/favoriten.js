@@ -1,15 +1,29 @@
 function onload(){
-    musik();
+    music();
 }
 
-function musik(){
+function sendRequest(filename) {
+	var xmlhttp=new XMLHttpRequest();
+	xmlhttp.onreadystatechange=function() {
+		if (xmlhttp.readyState == 4 && xmlhttp.status== 200) {
+			console.log(xmlhttp.responseText);
+			var json = $.parseJSON(xmlhttp.responseText);
+			console.log(json);
+			load(json);
+		}
+	}
+	xmlhttp.open("GET","../php/getFavorites.php?filename="+filename);
+	xmlhttp.send();
+}
+
+function music(){
     //selektiere Musik und deselektiere Film
     var o1 = document.getElementById("musikButton");
     o1.className = "button selected";
     
     var o2 = document.getElementById("filmButton");
     o2.className = "button";
-    loadMusik ();
+	sendRequest("music_json");
 }
 
 function film(){
@@ -17,35 +31,25 @@ function film(){
     o1.className = "button selected"
     var o2 = document.getElementById("musikButton");
     o2.className = "button";
-    loadFilm();
+	sendRequest("film_json");
 }
 
-function loadFilm (){
-    var table = "";
+function load(json) {
+	var table = "";
     table += '<table>';
-    table += '<tr> <td>Filmtitel</td> <td>Regie</td> <td>Drehbuch</td> <td>Erscheinungsjahr</td> <td>Genre</td> </tr>';   
-    for (var i=0; i<filmfav.length;i++){
-        table += '<tr> <td>' + filmfav[i].Filmtitel 
-		+ '</td> <td>' + filmfav[i].Regie 
-		+ '</td> <td>' + filmfav[i].Drehbuch 
-		+ '</td> <td>' + filmfav[i].Erscheinungsjahr 
-		+ '</td> <td>' + filmfav[i].Genre 
-		+ '</td></tr>';
-    }
+	// keys = table title
+	table += '<tr>';
+	Object.keys(json[0]).forEach(function(k) {
+		table += '<td>'+k+'</td>';
+	});
+	table += '</tr>';
+	
+	for (index = 0; index < json.length; ++index) {
+		table += '<tr>';
+		jQuery.each(json[index], function() {
+			table += '<td>'+this+'</td>';
+		});
+		table += '</tr>';
+	}
     document.getElementById("tabelle").innerHTML = table;
-}
-
-function loadMusik (){
-    var table = "";
-    table += '<table>';
-    table += '<tr> <td>Interpreter</td> <td>Albumtitel</td> <td>Erscheinungsjahr</td> <td>Genre</td> </tr>';   
-    for (var i=0; i<musicfav.length;i++){
-        table += '<tr> <td>' + musicfav[i].Interpreter 
-		+ '</td> <td>' + musicfav[i].Albumtitel 
-		+ '</td> <td>' + musicfav[i].Erscheinungsjahr 
-		+ '</td> <td>' + musicfav[i].Genre 
-		+ '</td></tr>';
-    }
-    document.getElementById("tabelle").innerHTML = table;
-  
 }
